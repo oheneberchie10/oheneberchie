@@ -2,65 +2,13 @@ html {
     scroll-behavior: smooth; /* This enables smooth scrolling */
 }
 body{
-    height: 1300px;
-    width: 500px;
+    margin: 0;
     background: linear-gradient(45deg,#3a86ff,#8338ec,#ff006e,#fb5607,#ffbe0b);
     background-size: 400% 400%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation: gradient 4s ease infinite;
-    margin-top: 20px;
-    margin-left: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
 }
-
-h2 {
-    margin-top: 40px; /* or any value you prefer */
-    box-shadow: #03045e;
-}
-
-@keyframes gradient{
-0% {
-    background-position: 0% 50%;
-}
-50% {
-    background-position: 100% 50%;
-}
-100% {
-    background-position: 0% 50%;
-}
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI',sans-serif;
-}
-
-nav{
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    position:absolute;
-    width: 60%;
-    left: 60%;
-    transform: translateX(-50%);
-    top: 2rem;
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 6px 6px rgba(0,0,0,0.5);
-}
-
-ul{
-
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-}
-
 a{
     text-decoration: none;
     color: black;
@@ -90,29 +38,73 @@ a:hover::after{
     left: 0;
 }
 
+h2 {
+    margin-top: 10px; /* or any value you prefer */
+    box-shadow: #03045e;
+}
+
+@keyframes gradient{
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+
+
+nav{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 1em;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.5);
+    top: 0;
+    position: sticky;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav li a:hover {
+    color: #ffffff;
+
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 2em;
+}
+
 .sidebox{
     background: rgba(255,255,255,0.15);
-    top: 4%;
-    left: 15%;
+    flex: 1;
     backdrop-filter: blur(10px);
-    padding: 2rem;
-    position:fixed; 
-    width: 350px;
-    min-height: 400px;
-    transform: translateX(-50%);
+    padding: 1em;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+
     border-radius:25px 25px 25px 25px;
     border: 1px solid rgba(255,255,255,0.5);
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
 .profile-pic {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 1rem;
-    border: 2px solid white;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
 }
 
 .sidebox h2 {
@@ -125,18 +117,16 @@ a:hover::after{
 
 .midbox{
     background: rgba(255,255,255,0.15);
-    left: 15%;
-    top:58%;
+    flex: 2;
     backdrop-filter: blur(10px);
-    padding: 2rem;
-    position:fixed; 
-    width: 350px;
-    height: 200px;
-    transform: translateX(-50%);
+    padding: 2em;
+    min-width: 250px;
     border-radius:25px 25px 25px 25px;
     border: 1px solid rgba(255,255,255,0.5);
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
+
+
 
 .sidebox p {
     text-align: center;
@@ -154,50 +144,49 @@ p {
 }
 
 .icons {
-    height: 20px;
-    width: 20px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin: 0.3em;
+    transition: transform 0.2s ease;
 }
 
 .icons:hover {
     transform: scale(1.2);
 }
 .social-icons {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    margin-top: auto;
-    padding-top: 1rem;
+    margin-top: 1em;
 }
 
-.textbox{
-    position: absolute;
-    left: 35%;
-    top: 20%;
-    text-align: left;
+.textbox {
+    flex-basis: 100%;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
+
+
 .textbox p{
     text-align: left;
     color: white;
     margin-bottom: 1rem;
     font-size: 1rem;
     opacity: 0.85;
-    line-height: 1;
+    line-height: 1.5;
 }
 .textbox h2{
     text-align: left;
-    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
     color: white;
     font-weight: 600;
-    line-height: 1;
 }
+
 .textbox h3{
     text-align: left;
     color: white;
-    padding-top: 2rem;
+    padding-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     opacity: 0.85;
     line-height: 0.5;
 }
@@ -232,7 +221,7 @@ p {
 .lang-tool-wrapper {
     display: flex;
     gap: 3rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
     flex-wrap: wrap;
 }
 
@@ -241,31 +230,33 @@ p {
 }
 
 .projectbox {
-    background-color: none;
-    width: 1000px;
-    height: 400px;
-    margin: 100px auto 0 auto; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-basis: 100%;
+    padding: 2em;
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    left: -50px;
-    bottom: 60px;
-}
+    background-color: none;
+    align-items: center; 
+ 
+    width: 100%;
 
+}
+.projectbox h2{
+    text-align: left;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+}
 
 .slider-images h1{
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0;
+    margin: 0;
+    padding: 0.5em;
     font-size: 1.2rem;
     color: white;
-    font-weight: 400;
-    line-height: 1.2;
-    z-index: 2;
-    max-width: 90%;
+   width: 100%;
+   border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
 .slider-images {
@@ -290,16 +281,18 @@ p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important; 
 }
 
-.slider-img{
-    width: 180px;
-    height: 300px;
-    border-radius: 6px;
-    cursor: pointer;
+
+.slider-img {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
     position: relative;
-    transition: 0.7s ease;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: block;
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
 }
 .slider-img img {
     border: 2px solid #8cc6e6;
@@ -386,3 +379,38 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.education-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+}
+.education-box {
+    flex: 1;
+    min-width: 250px;
+
+
+}
+
+
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .slider-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-img {
+        width: 90%;
+    }
+}
